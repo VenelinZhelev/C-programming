@@ -2,11 +2,11 @@
 #include <stdlib.h>
 
 int main(){
-        int b;
+        int b=0;
         do{
 printf("How many grades are there?:");
 scanf("%d",&b);
-  }while(b>0);
+  }while(b<0);
    float * grades = (float *)calloc(b,sizeof(float));
    if(grades==NULL){
     printf("error");
@@ -43,6 +43,7 @@ case 2:
     printf("Please enter value for new newgrades[%d]:", i+1);
     scanf("%f", &grades[i]);
   }
+  free(grades);
   break;
 case 3:
 if(b>1){

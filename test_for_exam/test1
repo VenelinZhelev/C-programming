@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main(){
+int b;
+scanf("%d",&b);
+float *grades=(float*)calloc(b,sizeof(float));
+if(grades==NULL){
+    return 1;
+}
+float *AvarageGr =(float*)malloc(sizeof(float));
+if(AvarageGr==NULL){
+    return 1;
+}
+*AvarageGr=b;
+
+grades=(float*)realloc(grades,(b+3)*sizeof(float));
+}
